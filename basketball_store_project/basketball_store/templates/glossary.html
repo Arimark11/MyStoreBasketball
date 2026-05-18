@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Словарь терминов{% endblock %}
+
+{% block content %}
+<h1>Словарь баскетбольной обуви</h1>
+<dl>
+    {% for term in terms %}
+        <dt><strong>{{ term.term }}</strong></dt>
+        <dd>{{ term.definition }}</dd>
+        <small>Добавлено: {{ term.added_at|date:"d/m/Y" }}</small>
+    {% empty %}
+        <p>Терминов пока нет.</p>
+    {% endfor %}
+</dl>
+{% endblock %}

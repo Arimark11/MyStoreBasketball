@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Контакты - наши сотрудники{% endblock %}
+
+{% block content %}
+<h1>Наши сотрудники</h1>
+
+<div style="display: flex; flex-wrap: wrap; gap: 20px;">
+    {% for emp in employees %}
+        <div style="border: 1px solid #ddd; border-radius: 8px; padding: 15px; width: 250px; text-align: center;">
+            {% if emp.photo %}
+                <img src="{{ emp.photo.url }}" alt="{{ emp.name }}" style="width: 100%; max-width: 150px; border-radius: 50%;">
+            {% else %}
+                <div style="width: 150px; height: 150px; background: #ccc; border-radius: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: center;">Нет фото</div>
+            {% endif %}
+            <h3>{{ emp.name }}</h3>
+            <p><strong>{{ emp.position }}</strong></p>
+            <p>📞 {{ emp.phone }}</p>
+            <p>✉️ {{ emp.email }}</p>
+            <p>{{ emp.description|linebreaks }}</p>
+        </div>
+    {% empty %}
+        <p>Сотрудники не добавлены. Зайдите в админку и добавьте несколько сотрудников.</p>
+    {% endfor %}
+</div>
+{% endblock %}

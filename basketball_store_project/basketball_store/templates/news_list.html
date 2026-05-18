@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Новости{% endblock %}
+
+{% block content %}
+<h1>Новости магазина</h1>
+{% for item in news %}
+    <div style="border-bottom: 1px solid #ccc; margin-bottom: 20px;">
+        <h2><a href="/news/{{ item.id }}/">{{ item.title }}</a></h2>
+        <p>{{ item.summary }}</p>
+        <small>{{ item.created_at|date:"d/m/Y H:i" }}</small>
+    </div>
+{% empty %}
+    <p>Новостей пока нет.</p>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Баскетбольная обувь{% endblock %}</title>
+    <style>
+        body { font-family: Arial; margin: 0; padding: 20px; }
+        nav a { margin-right: 15px; text-decoration: none; }
+        .content { margin-top: 20px; }
+        footer { margin-top: 40px; text-align: center; color: gray; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/">Главная</a>
+        <a href="/about/">О компании</a>
+        <a href="/news/">Новости</a>
+        <a href="/glossary/">Словарь</a>
+        <a href="/contacts/">Контакты</a>
+        <a href="/vacancies/">Вакансии</a>
+        <a href="/reviews/">Отзывы</a>
+        <a href="/promocodes/">Промокоды</a>
+        <a href="/privacy/">Политика</a>
+        {% if user.is_authenticated %}
+            <a href="{% url 'profile' %}">Личный кабинет</a>
+            <a href="{% url 'logout' %}">Выйти</a>   <!-- обычная ссылка, не форма -->
+        {% else %}
+            <a href="{% url 'login' %}">Войти</a>
+            <a href="{% url 'register' %}">Регистрация</a>
+        {% endif %}
+    </nav>
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+    <footer>
+        <p>Текущая дата: {% now "d/m/Y" %}</p>
+    </footer>
+</body>
+</html>

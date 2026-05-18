@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Главная - Баскетбольная обувь{% endblock %}
+
+{% block content %}
+<h1>Добро пожаловать в магазин баскетбольной обуви!</h1>
+<h2>Последняя новость</h2>
+{% if last_news %}
+    <h3>{{ last_news.title }}</h3>
+    <p>{{ last_news.summary }}</p>
+    <p><em>Опубликовано: {{ last_news.created_at|date:"d/m/Y" }}</em></p>
+{% else %}
+    <p>Новостей пока нет. Зайдите в админку и добавьте несколько новостей.</p>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}О компании{% endblock %}
+
+{% block content %}
+<h1>О компании</h1>
+{% if company %}
+    <p>{{ company.history|linebreaks }}</p>
+    <h3>Реквизиты</h3>
+    <p>{{ company.requisites|linebreaks }}</p>
+    {% if company.video_url %}
+        <iframe width="560" height="315" src="{{ company.video_url }}" frameborder="0"></iframe>
+    {% endif %}
+{% else %}
+    <p>Информация о компании не добавлена. Заполните в админке.</p>
+{% endif %}
+{% endblock %}
