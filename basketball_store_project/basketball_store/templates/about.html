@@ -4,14 +4,32 @@
 
 {% block content %}
 <h1>О компании</h1>
+
 {% if company %}
-    <p>{{ company.history|linebreaks }}</p>
-    <h3>Реквизиты</h3>
-    <p>{{ company.requisites|linebreaks }}</p>
+    {% if company.logo %}
+        <div style="margin-bottom: 20px;">
+            <img src="{{ company.logo.url }}" alt="{{ company.name }}" style="max-width: 200px; height: auto;">
+        </div>
+    {% endif %}
+
+    <div>
+        <h2>История</h2>
+        <p>{{ company.history|linebreaks }}</p>
+    </div>
+
+    <div>
+        <h3>Реквизиты</h3>
+        <p>{{ company.requisites|linebreaks }}</p>
+    </div>
+
     {% if company.video_url %}
-        <iframe width="560" height="315" src="{{ company.video_url }}" frameborder="0"></iframe>
+        <div>
+            <h3>Видео о компании</h3>
+            <iframe width="560" height="315" src="{{ company.video_url }}" frameborder="0" allowfullscreen></iframe>
+        </div>
     {% endif %}
 {% else %}
     <p>Информация о компании не добавлена. Заполните в админке.</p>
 {% endif %}
+
 {% endblock %}

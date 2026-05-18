@@ -1,14 +1,35 @@
 {% extends 'base.html' %}
 
-{% block title %}Словарь терминов{% endblock %}
+{% block title %}Словарь баскетбольной обуви{% endblock %}
 
 {% block content %}
 <h1>Словарь баскетбольной обуви</h1>
+<style>
+    .term-item {
+        margin-bottom: 30px;  /* отступ между разными терминами */
+    }
+    .term-item dt {
+        margin-bottom: 15px;  /* отступ между вопросом и ответом */
+        font-size: 1.1em;
+    }
+    .term-item dd {
+        margin-top: 5px;
+        margin-left: 20px;
+        margin-bottom: 15px;   /* ← добавляем отступ снизу перед датой */
+    }
+    .term-item small {
+        display: block;
+        margin-top: 10px;      /* дополнительный отступ сверху у даты */
+    }
+</style>
+
 <dl>
     {% for term in terms %}
-        <dt><strong>{{ term.term }}</strong></dt>
-        <dd>{{ term.definition }}</dd>
-        <small>Добавлено: {{ term.added_at|date:"d/m/Y" }}</small>
+        <div class="term-item">
+            <dt><strong>{{ term.term }}</strong></dt>
+            <dd>— {{ term.definition|linebreaksbr }}</dd>
+            <small>Добавлено: {{ term.added_at|date:"d/m/Y" }}</small>
+        </div>
     {% empty %}
         <p>Терминов пока нет.</p>
     {% endfor %}

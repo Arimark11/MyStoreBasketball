@@ -4,9 +4,13 @@
 
 {% block content %}
 <h1>Добро пожаловать в магазин баскетбольной обуви!</h1>
+
 <h2>Последняя новость</h2>
 {% if last_news %}
     <h3>{{ last_news.title }}</h3>
+    {% if last_news.image %}
+        <img src="{{ last_news.image.url }}" alt="{{ last_news.title }}" style="max-width: 200px; height: auto;">
+    {% endif %}
     <p>{{ last_news.summary }}</p>
     <p><em>Опубликовано: {{ last_news.created_at|date:"d/m/Y" }}</em></p>
 {% else %}
