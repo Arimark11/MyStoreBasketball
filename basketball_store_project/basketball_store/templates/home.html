@@ -37,6 +37,10 @@
         {% else %}
             <p>Не удалось получить данные игрока.</p>
         {% endif %}
+        <hr>
+        <h3>Временная информация</h3>
+        <p><strong>Текущая дата и время:</strong> {{ current_date }} {{ current_time }}</p>
+        <div>{{ calendar|safe }}</div>
     </div>
 </div>
 {% endblock %}

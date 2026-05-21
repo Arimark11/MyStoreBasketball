@@ -28,11 +28,12 @@ from .models import JobApplication
 from .forms import JobApplicationForm
 import logging
 from statistics import median, mode
-from datetime import date
 from .models import User, Order, OrderItem, Sneaker, Brand
 from django.core.paginator import Paginator
-
-
+from django.utils import timezone as django_timezone
+import pytz
+from datetime import datetime, date, timedelta
+from calendar import monthcalendar, month_name
 
 logger = logging.getLogger('store')
 
@@ -47,14 +48,54 @@ class NewsDetailView(DetailView):
     template_name = 'news_detail.html'
     context_object_name = 'news_item'
 
+
 def home(request):
+    # Получаем последнюю новость
     last_news = News.objects.order_by('-created_at').first()
+    
+    # Получаем данные API
     weather = get_weather()
-    basketball_player = get_random_basketball_player()   # ← вызов
+    basketball_player = get_random_basketball_player()
+    
+    # Определяем часовой пояс пользователя
+    user_timezone_str = 'UTC'
+    if request.user.is_authenticated and hasattr(request.user, 'timezone') and request.user.timezone:
+        user_timezone_str = request.user.timezone
+    
+    # Текущее время в UTC и в зоне пользователя
+    now_utc = django_timezone.now()
+    user_tz = pytz.timezone(user_timezone_str)
+    now_user = now_utc.astimezone(user_tz)
+    
+    # Форматирование даты и времени (без лишних подписей)
+    current_date_str = now_user.strftime('%d/%m/%Y')
+    current_time_str = now_user.strftime('%H:%M:%S')
+    
+    # Текстовый календарь
+    today = now_user.date()
+    cal = monthcalendar(today.year, today.month)
+    calendar_html = f'<table border="1" cellpadding="5"><tr><th>Пн</th><th>Вт</th><th>Ср</th><th>Чт</th><th>Пт</th><th>Сб</th><th>Вс</th></tr>'
+    for week in cal:
+        calendar_html += '<tr>'
+        for day in week:
+            if day == 0:
+                calendar_html += '<td> </td>'
+            else:
+                if day == today.day:
+                    calendar_html += f'<td><strong>{day}</strong></td>'
+                else:
+                    calendar_html += f'<td>{day}</td>'
+        calendar_html += '</tr>'
+    calendar_html += '</table>'
+    
     context = {
         'last_news': last_news,
         'weather': weather,
         'basketball_player': basketball_player,
+        'user_timezone': user_timezone_str,
+        'current_date': current_date_str,
+        'current_time': current_time_str,
+        'calendar': calendar_html,
     }
     return render(request, 'home.html', context)
 
@@ -219,6 +260,7 @@ def catalog(request):
         size = form.cleaned_data.get('size')
         search = form.cleaned_data.get('search')
         sort = form.cleaned_data.get('sort')
+        print("Search query:", search)
         
         if brand:
             sneakers = sneakers.filter(brand=brand)
@@ -229,6 +271,7 @@ def catalog(request):
         if size:
             # фильтр по наличию размера
             sneakers = sneakers.filter(sizes__size__size=size, sizes__stock__gt=0).distinct()
+        search = request.GET.get('search')
         if search:
             sneakers = sneakers.filter(model_name__icontains=search)
         
@@ -566,3 +609,11 @@ def catalog_paginated(request, page_number=1):
     paginator = Paginator(sneakers_list, 6)  # 6 товаров на страницу
     page_obj = paginator.get_page(page_number)
     return render(request, 'catalog_paginated.html', {'page_obj': page_obj})
+
+def convert_to_user_timezone(dt, user_timezone_str):
+    if dt is None:
+        return None
+    if django_timezone.is_naive(dt):
+        dt = django_timezone.make_aware(dt, django_timezone.utc)
+    user_tz = pytz.timezone(user_timezone_str)
+    return dt.astimezone(user_tz)

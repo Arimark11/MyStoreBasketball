@@ -36,7 +36,7 @@
                     {% endfor %}
                 </select>
                 <label>Кол-во:</label>
-                <input type="number" name="quantity" value="1" min="1" max="10" style="width: 70px;">
+                <input type="text" name="search" placeholder="Поиск..." value="{{ request.GET.search }}">
                 <button type="submit" {% if not sneaker.available_sizes %}disabled{% endif %}>В корзину</button>
                 </form>
             {% else %}

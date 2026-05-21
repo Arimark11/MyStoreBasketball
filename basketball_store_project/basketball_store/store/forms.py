@@ -4,6 +4,7 @@ from .models import User, Review
 from datetime import date
 from .models import Sneaker, Brand, Category
 from .models import JobApplication
+import pytz
 
 # Форма регистрации с валидацией телефона и возраста
 class CustomUserCreationForm(UserCreationForm):
@@ -31,10 +32,11 @@ class CustomUserCreationForm(UserCreationForm):
 class CustomUserChangeForm(forms.ModelForm):
     class Meta:
         model = User
-        fields = ['username', 'email', 'phone', 'birth_date']
+        fields = ['username', 'email', 'phone', 'birth_date', 'timezone']
         widgets = {
             'birth_date': forms.DateInput(attrs={'type': 'date'}),
             'phone': forms.TextInput(attrs={'placeholder': '+375 (29) 111-11-11'}),
+            'timezone': forms.Select(choices=[(tz, tz) for tz in pytz.common_timezones])
         }
 
     def clean_phone(self):

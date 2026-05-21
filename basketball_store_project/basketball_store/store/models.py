@@ -2,6 +2,8 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django.core.validators import MinValueValidator, MaxValueValidator, RegexValidator
 from datetime import date
+import pytz
+from django.core.validators import ValidationError
 
 # ---------------------- Кастомный пользователь ----------------------
 class User(AbstractUser):
@@ -14,6 +16,12 @@ class User(AbstractUser):
     is_manager = models.BooleanField(default=False, verbose_name='Статус менеджера')
     is_warehouse = models.BooleanField(default=False, verbose_name='Сотрудник склада')
     is_editor = models.BooleanField(default=False, verbose_name='Редактор сайта')
+    timezone = models.CharField(
+        max_length=50,
+        choices=[(tz, tz) for tz in pytz.common_timezones],
+        default='UTC',
+        verbose_name='Часовой пояс'
+    )
 
     @property
     def age(self):
