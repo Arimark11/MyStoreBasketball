@@ -3,7 +3,7 @@
 {% block title %}Новости магазина{% endblock %}
 
 {% block content %}
-<h1>Новости магазина баскетбольной обуви</h1>
+<h1>Наши новости</h1>
 
 <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: flex-start;">
     {% for item in news %}
@@ -14,6 +14,10 @@
             <h3 style="margin: 10px 0;"><a href="/news/{{ item.id }}/">{{ item.title }}</a></h3>
             <p>{{ item.summary|truncatechars:100 }}</p>
             <small>{{ item.created_at|date:"d/m/Y H:i" }}</small>
+            {% if user.is_editor or user.is_superuser %}
+                <a href="{% url 'news_update' item.id %}">✏️ Редактировать</a>
+                <a href="{% url 'news_delete' item.id %}">❌ Удалить</a>
+            {% endif %}
         </div>
     {% empty %}
         <p>Новостей пока нет.</p>

@@ -99,11 +99,12 @@ class PrivacyPolicyAdmin(admin.ModelAdmin):
 # Регистрация кастомного пользователя
 @admin.register(User)
 class UserAdmin(admin.ModelAdmin):
-    list_display = ('username', 'email', 'phone', 'birth_date', 'age')
+    list_display = ('username', 'email', 'phone', 'birth_date', 'is_manager', 'is_warehouse', 'is_staff', 'is_superuser')
+    list_filter = ('is_manager', 'is_warehouse', 'is_staff', 'is_superuser')
     search_fields = ('username', 'email')
     fieldsets = (
         (None, {'fields': ('username', 'password')}),
         ('Personal info', {'fields': ('first_name', 'last_name', 'email', 'phone', 'birth_date')}),
-        ('Permissions', {'fields': ('is_active', 'is_staff', 'is_superuser', 'groups', 'user_permissions')}),
+        ('Permissions', {'fields': ('is_active', 'is_staff', 'is_superuser', 'is_manager', 'is_warehouse', 'groups', 'user_permissions')}),
         ('Important dates', {'fields': ('last_login', 'date_joined')}),
     )

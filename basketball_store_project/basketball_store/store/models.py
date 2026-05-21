@@ -11,6 +11,9 @@ class User(AbstractUser):
     )
     phone = models.CharField(validators=[phone_regex], max_length=20, unique=True)
     birth_date = models.DateField(null=True, blank=True)
+    is_manager = models.BooleanField(default=False, verbose_name='Статус менеджера')
+    is_warehouse = models.BooleanField(default=False, verbose_name='Сотрудник склада')
+    is_editor = models.BooleanField(default=False, verbose_name='Редактор сайта')
 
     @property
     def age(self):
@@ -161,6 +164,24 @@ class Vacancy(models.Model):
 
     def __str__(self):
         return self.title
+    
+class JobApplication(models.Model):
+    STATUS_CHOICES = [
+        ('pending', 'На рассмотрении'),
+        ('approved', 'Одобрено'),
+        ('rejected', 'Отклонено'),
+    ]
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='job_applications')
+    vacancy = models.ForeignKey(Vacancy, on_delete=models.CASCADE, related_name='applications')
+    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='pending')
+    created_at = models.DateTimeField(auto_now_add=True)
+    comment = models.TextField(blank=True, verbose_name='Комментарий к заявке')
+
+    class Meta:
+        unique_together = ('user', 'vacancy')  # чтобы один пользователь не мог подать повторно на ту же вакансию
+
+    def __str__(self):
+        return f"{self.user.username} -> {self.vacancy.title} ({self.status})"
 
 class Review(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='reviews')
@@ -187,3 +208,15 @@ class PrivacyPolicy(models.Model):
 
     def __str__(self):
         return "Политика конфиденциальности"
+    
+class Employee(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE, null=True, blank=True, related_name='employee_profile')
+    photo = models.ImageField(upload_to='employees/', blank=True, null=True)
+    name = models.CharField(max_length=100)
+    position = models.CharField(max_length=100)
+    phone = models.CharField(max_length=20)
+    email = models.EmailField()
+    description = models.TextField(blank=True)
+
+    def __str__(self):
+        return self.name

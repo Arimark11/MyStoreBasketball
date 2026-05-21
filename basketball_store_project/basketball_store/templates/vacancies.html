@@ -9,6 +9,11 @@
         <h3>{{ vac.title }}</h3>
         <p>{{ vac.description|linebreaks }}</p>
         <small>Опубликовано: {{ vac.posted_at|date:"d/m/Y" }}</small>
+        {% if user.is_authenticated %}
+            <a href="{% url 'apply_vacancy' vac.id %}">Подать заявку</a>
+        {% else %}
+            <p><a href="{% url 'login' %}">Войдите</a>, чтобы подать заявку.</p>
+        {% endif %}   {# ← здесь должно быть только {% endif %} #}
     </div>
 {% empty %}
     <p>Вакансий нет.</p>

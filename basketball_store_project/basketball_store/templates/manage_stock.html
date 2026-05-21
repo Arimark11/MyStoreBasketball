@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}Управление складом{% endblock %}
+
+{% block content %}
+<h1>Управление остатками на складе</h1>
+<form method="post" action="{% url 'update_stock' %}">
+    {% csrf_token %}
+    <table border="1" cellpadding="5">
+        <thead>
+            <tr><th>Модель</th><th>Бренд</th><th>Размер</th><th>Текущий остаток</th><th>Новый остаток</th></tr>
+        </thead>
+        <tbody>
+            {% for sneaker in sneakers %}
+                {% for sz in sneaker.sizes.all %}
+                    <tr>
+                        <td>{{ sneaker.model_name }}</td>
+                        <td>{{ sneaker.brand.name }}</td>
+                        <td>{{ sz.size.size }}</td>
+                        <td>{{ sz.stock }}</td>
+                        <td>
+                            <input type="number" name="stock_{{ sz.id }}" value="{{ sz.stock }}" min="0" step="1">
+                        </td>
+                    </tr>
+                {% endfor %}
+            {% empty %}
+                <td> colspan="5">Нет товаров</tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <button type="submit">Сохранить изменения</button>
+</form>
+{% endblock %}

@@ -21,6 +21,11 @@
         <a href="/reviews/">Отзывы</a>
         <a href="/promocodes/">Промокоды</a>
         <a href="/privacy/">Политика</a>
+        <a href="{% url 'catalog' %}">Каталог</a>
+        <a href="{% url 'cart_view' %}">Корзина</a>
+        {% if user.is_superuser %}
+            <a href="{% url 'analytics' %}">Аналитика</a>
+        {% endif %}
         {% if user.is_authenticated %}
             <a href="{% url 'profile' %}">Личный кабинет</a>
             <a href="{% url 'logout' %}">Выйти</a>   <!-- обычная ссылка, не форма -->
@@ -28,8 +33,27 @@
             <a href="{% url 'login' %}">Войти</a>
             <a href="{% url 'register' %}">Регистрация</a>
         {% endif %}
+        {% if user.is_authenticated and user.is_manager or user.is_superuser %}
+            <a href="{% url 'manage_orders' %}">Управление заказами</a>
+        {% endif %}
+        {% if user.is_superuser %}
+            <a href="{% url 'manage_applications' %}">Управление заявками</a>
+        {% endif %}
+        {% if user.is_authenticated and user.is_warehouse or user.is_superuser %}
+            <a href="{% url 'manage_stock' %}">Склад</a>
+        {% endif %}
+        {% if user.is_authenticated and user.is_editor or user.is_superuser %}
+            <a href="{% url 'news_create' %}">Добавить новость</a>
+        {% endif %}
     </nav>
     <div class="content">
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
         {% block content %}{% endblock %}
     </div>
     <footer>

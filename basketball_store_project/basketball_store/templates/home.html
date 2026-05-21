@@ -3,17 +3,40 @@
 {% block title %}Главная - Баскетбольная обувь{% endblock %}
 
 {% block content %}
-<h1>Добро пожаловать в магазин баскетбольной обуви!</h1>
+<div style="display: flex; gap: 30px; align-items: flex-start;">
+    <!-- ЛЕВАЯ КОЛОНКА: новости -->
+    <div style="flex: 2;">
+        <h1>Добро пожаловать в магазин баскетбольной обуви!</h1>
+        <h2>Последняя новость</h2>
+        {% if last_news %}
+            <h3>{{ last_news.title }}</h3>
+            {% if last_news.image %}
+                <img src="{{ last_news.image.url }}" alt="{{ last_news.title }}" style="max-width: 200px; height: auto;">
+            {% endif %}
+            <p>{{ last_news.summary }}</p>
+            <p><em>Опубликовано: {{ last_news.created_at|date:"d/m/Y" }}</em></p>
+        {% else %}
+            <p>Новостей пока нет. Зайдите в админку и добавьте несколько новостей.</p>
+        {% endif %}
+    </div>
 
-<h2>Последняя новость</h2>
-{% if last_news %}
-    <h3>{{ last_news.title }}</h3>
-    {% if last_news.image %}
-        <img src="{{ last_news.image.url }}" alt="{{ last_news.title }}" style="max-width: 200px; height: auto;">
-    {% endif %}
-    <p>{{ last_news.summary }}</p>
-    <p><em>Опубликовано: {{ last_news.created_at|date:"d/m/Y" }}</em></p>
-{% else %}
-    <p>Новостей пока нет. Зайдите в админку и добавьте несколько новостей.</p>
-{% endif %}
+    <div style="flex: 1; margin-left: auto; padding-left: 20px; max-width: 300px;">
+        <h3>Погода в Минске</h3>
+        {% if weather %}
+            <p>🌡️ Температура: {{ weather.temperature }} °C</p>
+            <p>💨 Ветер: {{ weather.windspeed }} км/ч</p>
+        {% else %}
+            <p>Не удалось получить погоду.</p>
+        {% endif %}
+        <hr>
+        <h3>Случайный игрок NBA</h3>
+        {% if basketball_player %}
+            <p>🏀 <strong>{{ basketball_player.first_name }} {{ basketball_player.last_name }}</strong></p>
+            <p>Команда: {{ basketball_player.team }}</p>
+            <p>Позиция: {{ basketball_player.position }}</p>
+        {% else %}
+            <p>Не удалось получить данные игрока.</p>
+        {% endif %}
+    </div>
+</div>
 {% endblock %}

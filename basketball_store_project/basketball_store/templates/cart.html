@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Корзина{% endblock %}
+
+{% block content %}
+<h1>Корзина</h1>
+{% if items %}
+    <table border="1" cellpadding="5">
+        <tr><th>Товар</th><th>Размер</th><th>Цена</th><th>Кол-во</th><th>Сумма</th><th></th></tr>
+        {% for item in items %}
+        <tr>
+            <td>{{ item.sneaker_size.sneaker.brand.name }} {{ item.sneaker_size.sneaker.model_name }}</td>
+            <td>{{ item.sneaker_size.size.size }}</td>
+            <td>{{ item.sneaker_size.sneaker.price }} руб.</td>
+            <td>{{ item.quantity }}</td>
+            <td>{{ item.subtotal }} руб.</td>
+            <td><a href="{% url 'cart_remove' item.sneaker_size.id %}">Удалить</a></td>
+        </tr>
+        {% endfor %}
+        <tr><td colspan="4"><strong>Итого</strong></td><td><strong>{{ total }} руб.</strong></td><td></td></tr>
+    </table>
+    <a href="{% url 'catalog' %}">Продолжить покупки</a>
+    <a href="{% url 'checkout' %}">Оформить заказ</a>
+{% else %}
+    <p>Корзина пуста.</p>
+    <a href="{% url 'catalog' %}">Вернуться в каталог</a>
+{% endif %}
+{% endblock %}

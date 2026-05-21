@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Подача заявки на {{ vacancy.title }}{% endblock %}
+
+{% block content %}
+<h2>Заявка на вакансию "{{ vacancy.title }}"</h2>
+<form method="post">
+    {% csrf_token %}   <!-- ЭТО ОБЯЗАТЕЛЬНО -->
+    {{ form.as_p }}
+    <button type="submit">Отправить заявку</button>
+</form>
+<p><a href="{% url 'vacancies' %}">Вернуться к вакансиям</a></p>
+{% endblock %}

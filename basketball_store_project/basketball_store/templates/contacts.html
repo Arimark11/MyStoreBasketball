@@ -1,11 +1,9 @@
 {% extends 'base.html' %}
-{% load static %}
 
-{% block title %}Контакты - наши сотрудники{% endblock %}
+{% block title %}Контакты — Наши сотрудники{% endblock %}
 
 {% block content %}
 <h1>Наши сотрудники</h1>
-
 <div style="display: flex; flex-wrap: wrap; gap: 20px;">
     {% for emp in employees %}
         <div style="border: 1px solid #ddd; border-radius: 8px; padding: 15px; width: 250px; text-align: center;">
@@ -21,7 +19,7 @@
             <p>{{ emp.description|linebreaks }}</p>
         </div>
     {% empty %}
-        <p>Сотрудники не добавлены. Зайдите в админку и добавьте несколько сотрудников.</p>
+        <p>Пока нет сотрудников.</p>
     {% endfor %}
 </div>
 {% endblock %}

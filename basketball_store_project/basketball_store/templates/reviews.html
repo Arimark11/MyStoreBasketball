@@ -18,6 +18,9 @@
 
 <h2>Все отзывы</h2>
 {% for rev in reviews %}
+    {% if user.is_editor or user.is_superuser %}
+        <a href="{% url 'delete_review' rev.id %}" onclick="return confirm('Удалить отзыв?')">🗑️ Удалить</a>
+    {% endif %}
     <div style="border-bottom: 1px solid #ccc; margin-bottom: 15px;">
         <strong>{{ rev.user.username }}</strong> ({{ rev.rating }}★) <br>
         <p>{{ rev.text|linebreaks }}</p>

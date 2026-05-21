@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block title %}Каталог кроссовок{% endblock %}
+
+{% block content %}
+<h1>Каталог баскетбольной обуви</h1>
+
+<form method="get" style="margin-bottom: 20px; padding: 15px; border: 1px solid #ccc; display: flex; flex-wrap: wrap; gap: 10px;">
+    {{ form.as_p }}
+    <button type="submit">Применить</button>
+</form>
+
+<div style="display: flex; flex-wrap: wrap; gap: 20px;">
+    {% for sneaker in sneakers %}
+        <div style="border: 1px solid #ddd; padding: 15px; width: 250px;">
+            {% if sneaker.image %}
+                <img src="{{ sneaker.image.url }}" alt="{{ sneaker.model_name }}" style="width: 100%; height: 180px; object-fit: cover;">
+            {% endif %}
+            <h3>{{ sneaker.brand.name }} {{ sneaker.model_name }}</h3>
+            <p>Цена: {{ sneaker.price }} руб.</p>
+            <p>Сезон: {{ sneaker.get_season_display }}</p>
+            <p>Размеры в наличии: 
+                {% for sz in sneaker.available_sizes %}
+                    {{ sz.size.size }}{% if not forloop.last %}, {% endif %}
+                {% empty %} нет{% endfor %}
+            </p>
+            {% if user.is_authenticated %}
+                <form method="post" action="{% url 'cart_add' %}">
+                    {% csrf_token %}
+                    <label for="size_{{ sneaker.id }}">Размер:</label>
+                    <select name="sneaker_size_id" id="size_{{ sneaker.id }}" required>
+                        {% for sz in sneaker.available_sizes %}
+                            <option value="{{ sz.id }}">{{ sz.size.size }} (в наличии: {{ sz.stock }})</option>
+                         {% empty %}
+                    <option disabled>Нет доступных размеров</option>
+                    {% endfor %}
+                </select>
+                <label>Кол-во:</label>
+                <input type="number" name="quantity" value="1" min="1" max="10" style="width: 70px;">
+                <button type="submit" {% if not sneaker.available_sizes %}disabled{% endif %}>В корзину</button>
+                </form>
+            {% else %}
+            <a href="{% url 'login' %}">Войдите, чтобы купить</a>
+            {% endif %}
+        </div>
+    {% empty %}
+        <p>Товаров не найдено.</p>
+    {% endfor %}
+</div>
+{% endblock %}

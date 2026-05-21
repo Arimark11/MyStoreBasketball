@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}Управление заявками{% endblock %}
+
+{% block content %}
+<h1>Управление заявками на вакансии</h1>
+<table border="1" cellpadding="5">
+    <thead>
+        <tr><th>Пользователь</th><th>Вакансия</th><th>Дата подачи</th><th>Статус</th><th>Комментарий</th><th>Действия</th></tr>
+    </thead>
+    <tbody>
+        {% for app in applications %}
+        <tr>
+            <td>{{ app.user.username }} ({{ app.user.email }})</td>
+            <td>{{ app.vacancy.title }}</td>
+            <td>{{ app.created_at|date:"d/m/Y H:i" }}</td>
+            <td>{{ app.get_status_display }}</td>
+            <td>{{ app.comment|default:"—" }}</td>
+            <td>
+                <form method="post" action="{% url 'update_application' app.id %}">
+                    {% csrf_token %}
+                    <select name="status">
+                        <option value="pending" {% if app.status == 'pending' %}selected{% endif %}>На рассмотрении</option>
+                        <option value="approved" {% if app.status == 'approved' %}selected{% endif %}>Одобрено</option>
+                        <option value="rejected" {% if app.status == 'rejected' %}selected{% endif %}>Отклонено</option>
+                    </select>
+                    <button type="submit">Изменить</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a href="{% url 'vacancies' %}">Вернуться к вакансиям</a>
+{% endblock %}
