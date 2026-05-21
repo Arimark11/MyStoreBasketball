@@ -30,6 +30,7 @@ import logging
 from statistics import median, mode
 from datetime import date
 from .models import User, Order, OrderItem, Sneaker, Brand
+from django.core.paginator import Paginator
 
 
 
@@ -553,3 +554,15 @@ class NewsDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 
     def test_func(self):
         return is_editor_or_superuser(self.request.user)
+    
+
+def sneaker_detail(request, sneaker_id):
+    sneaker = get_object_or_404(Sneaker, id=sneaker_id)
+    return render(request, 'sneaker_detail.html', {'sneaker': sneaker})
+
+
+def catalog_paginated(request, page_number=1):
+    sneakers_list = Sneaker.objects.all().order_by('id')
+    paginator = Paginator(sneakers_list, 6)  # 6 товаров на страницу
+    page_obj = paginator.get_page(page_number)
+    return render(request, 'catalog_paginated.html', {'page_obj': page_obj})

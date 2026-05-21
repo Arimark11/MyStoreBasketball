@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ sneaker.brand.name }} {{ sneaker.model_name }}{% endblock %}
+
+{% block content %}
+<h1>{{ sneaker.brand.name }} {{ sneaker.model_name }}</h1>
+{% if sneaker.image %}
+    <img src="{{ sneaker.image.url }}" alt="{{ sneaker.model_name }}" style="max-width: 300px;">
+{% endif %}
+<p>Цена: {{ sneaker.price }} руб.</p>
+<p>Сезон: {{ sneaker.get_season_display }}</p>
+<p>Описание: {{ sneaker.description }}</p>
+<p>Размеры в наличии:
+    {% for sz in sneaker.sizes.all %}
+        {{ sz.size.size }} ({{ sz.stock }} шт.){% if not forloop.last %}, {% endif %}
+    {% endfor %}
+</p>
+<a href="{% url 'catalog' %}">Вернуться в каталог</a>
+{% endblock %}

@@ -4,6 +4,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.auth.views import LoginView, LogoutView
 from store import views
+from django.urls import path, re_path
 
 
 urlpatterns = [
@@ -42,6 +43,8 @@ urlpatterns = [
     path('news/<int:pk>/edit/', views.NewsUpdateView.as_view(), name='news_update'),
     path('news/<int:pk>/delete/', views.NewsDeleteView.as_view(), name='news_delete'),
     path('review/delete/<int:review_id>/', views.delete_review, name='delete_review'),
+    re_path(r'^sneaker/(?P<sneaker_id>\d+)/$', views.sneaker_detail, name='sneaker_detail'),
+    re_path(r'^catalog/page/(?P<page_number>\d+)/$', views.catalog_paginated, name='catalog_paginated'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:
