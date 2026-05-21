@@ -19,7 +19,7 @@ class User(AbstractUser):
     timezone = models.CharField(
         max_length=50,
         choices=[(tz, tz) for tz in pytz.common_timezones],
-        default='UTC',
+        default='UTC',           # ← обязательно
         verbose_name='Часовой пояс'
     )
 
