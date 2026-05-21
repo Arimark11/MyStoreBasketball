@@ -35,6 +35,7 @@ import pytz
 from datetime import datetime, date, timedelta
 from calendar import monthcalendar, month_name
 
+
 logger = logging.getLogger('store')
 
 class NewsListView(ListView):
@@ -235,6 +236,30 @@ def analytics(request):
         top_model = None
         top_model_profit = 0
     
+    end_date = timezone.now().date()
+    start_date = end_date - timedelta(days=6)
+    date_range = [start_date + timedelta(days=i) for i in range(7)]
+    
+    orders_by_day = []
+    for d in date_range:
+        cnt = Order.objects.filter(created_at__date=d, status='paid').count()
+        orders_by_day.append(cnt)
+    
+    labels = [d.strftime('%d.%m') for d in date_range]
+    max_count = max(orders_by_day) if orders_by_day else 1
+    chart_data_points = []
+    for label, count in zip(labels, orders_by_day):
+        percent = (count / max_count * 100) if max_count > 0 else 0
+        chart_data_points.append({'label': label, 'count': count, 'percent': percent})
+
+    max_count = max(orders_by_day) if orders_by_day else 1
+    chart_data_points = []
+    for label, count in zip(labels, orders_by_day):
+        percent = (count / max_count * 100) if max_count > 0 else 0
+    # Символы: масштабируем до 30 символов максимум
+        bar_length = int(percent * 30 / 100)  # 30 символов – максимальная длина
+        bar = '█' * bar_length if bar_length > 0 else ''
+        chart_data_points.append({'label': label, 'count': count, 'bar': bar})
     context = {
         'customers': customers,
         'total_revenue': total_revenue,
@@ -246,6 +271,8 @@ def analytics(request):
         'top_brand': top_brand,
         'top_model': top_model,
         'top_model_profit': top_model_profit,
+        'chart_data_points': chart_data_points,
+        'max_count': max_count
     }
     return render(request, 'analytics.html', context)
 
@@ -319,6 +346,7 @@ def cart_add(request):
         messages.success(request, 'Товар добавлен в корзину.')
         return redirect('catalog')
 
+@login_required
 def cart_view(request):
     cart = request.session.get('cart', {})
     items = []

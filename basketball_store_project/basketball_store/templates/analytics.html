@@ -5,51 +5,64 @@
 {% block content %}
 <h1>Статистические показатели</h1>
 
-<h2>Клиенты (в алфавитном порядке) и их траты</h2>
-<table border="1" cellpadding="5">
-    <thead>
-        <tr><th>Логин</th><th>Email</th><th>Потрачено, руб</th></tr>
-    </thead>
-    <tbody>
-        {% for cust in customers %}
-        <tr>
-            <td>{{ cust.username }}</td>
-            <td>{{ cust.email }}</td>
-            <td>{{ cust.total_spent|default:0 }}</td>
-        </tr>
-        {% empty %}
-        <tr><td colspan="3">Нет клиентов</td></tr>
-        {% endfor %}
-    </tbody>
-</table>
+<div style="display: flex; gap: 30px;">
+    <!-- Левая колонка: основные показатели -->
+    <div style="flex: 2;">
+        <h2>Клиенты (в алфавитном порядке) и их траты</h2>
+        <table border="1" cellpadding="5" style="border-collapse: collapse;">
+            <thead><tr><th>Логин</th><th>Email</th><th>Потрачено, руб</th></tr></thead>
+            <tbody>
+                {% for cust in customers %}
+                <tr>
+                    <td>{{ cust.username }}</td>
+                    <td>{{ cust.email }}</td>
+                    <td>{{ cust.total_spent|default:0 }}</td>
+                </tr>
+                {% empty %}
+                <tr><td colspan="3">Нет клиентов</td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
 
-<h2>Общая выручка</h2>
-<p><strong>{{ total_revenue }} руб.</strong></p>
+        <h2>Общая выручка</h2>
+        <p><strong>{{ total_revenue }} руб.</strong></p>
 
-<h2>Статистика по сумме заказов (оплаченные)</h2>
-<ul>
-    <li>Средняя сумма: {{ avg_order|floatformat:2 }} руб.</li>
-    <li>Мода: {{ order_mode|default:"нет данных" }}</li>
-    <li>Медиана: {{ order_median|floatformat:2 }} руб.</li>
-</ul>
+        <h2>Статистика по сумме заказов (оплаченные)</h2>
+        <ul>
+            <li>Средняя сумма: {{ avg_order|floatformat:2 }} руб.</li>
+            <li>Мода: {{ order_mode|default:"нет данных" }}</li>
+            <li>Медиана: {{ order_median|floatformat:2 }} руб.</li>
+        </ul>
 
-<h2>Возраст клиентов</h2>
-<ul>
-    <li>Средний возраст: {{ avg_age|floatformat:1 }} лет</li>
-    <li>Медианный возраст: {{ median_age|floatformat:1 }} лет</li>
-</ul>
+        <h2>Возраст клиентов</h2>
+        <ul>
+            <li>Средний возраст: {{ avg_age|floatformat:1 }} лет</li>
+            <li>Медианный возраст: {{ median_age|floatformat:1 }} лет</li>
+        </ul>
 
-<h2>Самый популярный бренд</h2>
-{% if top_brand %}
-    <p>{{ top_brand.name }} — продано {{ top_brand.total_sold }} пар</p>
-{% else %}
-    <p>Нет данных</p>
-{% endif %}
+        <h2>Самый популярный бренд</h2>
+        {% if top_brand %}
+            <p>{{ top_brand.name }} — продано {{ top_brand.total_sold }} пар</p>
+        {% else %}
+            <p>Нет данных</p>
+        {% endif %}
 
-<h2>Модель с наибольшей прибылью</h2>
-{% if top_model %}
-    <p>{{ top_model.brand.name }} {{ top_model.model_name }} — прибыль {{ top_model_profit }} руб.</p>
-{% else %}
-    <p>Нет данных</p>
-{% endif %}
+        <h2>Модель с наибольшей прибылью</h2>
+        {% if top_model %}
+            <p>{{ top_model.brand.name }} {{ top_model.model_name }} — прибыль {{ top_model_profit }} руб.</p>
+        {% else %}
+            <p>Нет данных</p>
+        {% endif %}
+    </div>
+
+    <!-- Правая колонка: график -->
+    <div style="flex: 1;">
+        <h2>Заказы по дням (последние 7 дней)</h2>
+        <pre style="font-family: monospace; line-height: 1.5;">
+{% for point in chart_data_points %}
+{{ point.label }}: {{ point.bar }} ({{ point.count }})
+{% endfor %}
+        </pre>
+    </div>
+</div>
 {% endblock %}
