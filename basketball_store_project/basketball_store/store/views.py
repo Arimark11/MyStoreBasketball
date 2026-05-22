@@ -23,6 +23,8 @@ from .forms import CatalogFilterForm
 from django.shortcuts import get_object_or_404, redirect
 import requests
 import random
+from django.conf import settings
+from django.core.cache import cache
 from django.contrib import messages
 from .models import JobApplication
 from .forms import JobApplicationForm
@@ -34,7 +36,36 @@ from django.utils import timezone as django_timezone
 import pytz
 from datetime import datetime, date, timedelta
 from calendar import monthcalendar, month_name
+from .forms import SneakerForm
 
+def is_editor_or_admin(user):
+    return user.is_authenticated and (user.is_editor or user.is_superuser)
+
+class SneakerCreateView(LoginRequiredMixin, UserPassesTestMixin, CreateView):
+    model = Sneaker
+    form_class = SneakerForm
+    template_name = 'sneaker_form.html'
+    success_url = reverse_lazy('catalog')
+
+    def test_func(self):
+        return is_editor_or_admin(self.request.user)
+
+class SneakerUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+    model = Sneaker
+    form_class = SneakerForm
+    template_name = 'sneaker_form.html'
+    success_url = reverse_lazy('catalog')
+
+    def test_func(self):
+        return is_editor_or_admin(self.request.user)
+
+class SneakerDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+    model = Sneaker
+    template_name = 'sneaker_confirm_delete.html'
+    success_url = reverse_lazy('catalog')
+
+    def test_func(self):
+        return is_editor_or_admin(self.request.user)
 
 logger = logging.getLogger('store')
 
@@ -192,13 +223,13 @@ class RegisterView(CreateView):
 
 @staff_member_required
 def analytics(request):
-    # 1. Список клиентов в алфавитном порядке + общая сумма их заказов
+    #Список клиентов в алфавитном порядке + общая сумма их заказов
     customers = User.objects.annotate(total_spent=Sum('orders__total_amount')).order_by('username')
     
-    # 2. Общая выручка магазина (оплаченные заказы)
+    #Общая выручка магазина (оплаченные заказы)
     total_revenue = Order.objects.filter(status='paid').aggregate(Sum('total_amount'))['total_amount__sum'] or 0
     
-    # 3. Статистика по суммам заказов (среднее, мода, медиана)
+    #Статистика по суммам заказов (среднее, мода, медиана)
     order_amounts = list(Order.objects.filter(status='paid').values_list('total_amount', flat=True))
     if order_amounts:
         avg_order = sum(order_amounts) / len(order_amounts)
@@ -210,7 +241,7 @@ def analytics(request):
     else:
         avg_order = order_mode = order_median = None
     
-    # 4. Возраст клиентов (средний и медианный)
+    #Возраст клиентов (средний и медианный)
     ages = []
     for user in User.objects.filter(birth_date__isnull=False):
         age = user.age if hasattr(user, 'age') else (date.today().year - user.birth_date.year)
@@ -218,11 +249,11 @@ def analytics(request):
     avg_age = sum(ages) / len(ages) if ages else None
     median_age = median(ages) if ages else None
     
-    # 5. Самый популярный бренд (по количеству проданных пар)
+    #Самый популярный бренд (по количеству проданных пар)
     brand_sales = Brand.objects.annotate(total_sold=Sum('sneakers__sizes__orderitem__quantity')).order_by('-total_sold')
     top_brand = brand_sales.first()
     
-    # 6. Модель, приносящая наибольшую прибыль (считаем price_at_time * quantity по каждому OrderItem)
+    #Модель, приносящая наибольшую прибыль (считаем price_at_time * quantity по каждому OrderItem)
     profit_by_model = {}
     for item in OrderItem.objects.select_related('sneaker_size__sneaker'):
         sneaker = item.sneaker_size.sneaker
@@ -441,7 +472,7 @@ def update_order_status(request, order_id):
             order.save()
     return redirect('manage_orders')
 
-
+#API с погодой
 def get_weather():
     url = "https://api.open-meteo.com/v1/forecast"
     params = {
@@ -463,9 +494,7 @@ def get_weather():
         logger.error(f"Weather API error: {e}")
         return None
 
-from django.conf import settings
-from django.core.cache import cache
-
+#Api c баскетболом
 def get_random_basketball_player():
     cache_key = 'basketball_player'
     player = cache.get(cache_key)
@@ -500,6 +529,7 @@ def get_random_basketball_player():
         print(f"Request error: {e}")
     return None
 
+#вакансия
 @login_required
 def apply_for_vacancy(request, vacancy_id):
     vacancy = get_object_or_404(Vacancy, id=vacancy_id)
@@ -645,3 +675,32 @@ def convert_to_user_timezone(dt, user_timezone_str):
         dt = django_timezone.make_aware(dt, django_timezone.utc)
     user_tz = pytz.timezone(user_timezone_str)
     return dt.astimezone(user_tz)
+
+def is_editor_or_admin(user):
+    return user.is_authenticated and (user.is_editor or user.is_superuser)
+
+class SneakerCreateView(LoginRequiredMixin, UserPassesTestMixin, CreateView):
+    model = Sneaker
+    form_class = SneakerForm
+    template_name = 'sneaker_form.html'
+    success_url = reverse_lazy('catalog')
+
+    def test_func(self):
+        return is_editor_or_admin(self.request.user)
+
+class SneakerUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+    model = Sneaker
+    form_class = SneakerForm
+    template_name = 'sneaker_form.html'
+    success_url = reverse_lazy('catalog')
+
+    def test_func(self):
+        return is_editor_or_admin(self.request.user)
+
+class SneakerDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+    model = Sneaker
+    template_name = 'sneaker_confirm_delete.html'
+    success_url = reverse_lazy('catalog')
+
+    def test_func(self):
+        return is_editor_or_admin(self.request.user)

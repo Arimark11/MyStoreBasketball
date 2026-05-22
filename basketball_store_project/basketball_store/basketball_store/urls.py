@@ -45,6 +45,9 @@ urlpatterns = [
     path('review/delete/<int:review_id>/', views.delete_review, name='delete_review'),
     re_path(r'^sneaker/(?P<sneaker_id>\d+)/$', views.sneaker_detail, name='sneaker_detail'),
     re_path(r'^catalog/page/(?P<page_number>\d+)/$', views.catalog_paginated, name='catalog_paginated'),
+    path('sneaker/add/', views.SneakerCreateView.as_view(), name='sneaker_add'),
+    path('sneaker/<int:pk>/edit/', views.SneakerUpdateView.as_view(), name='sneaker_edit'),
+    path('sneaker/<int:pk>/delete/', views.SneakerDeleteView.as_view(), name='sneaker_delete'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:

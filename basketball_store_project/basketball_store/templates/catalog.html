@@ -42,6 +42,15 @@
             {% else %}
             <a href="{% url 'login' %}">Войдите, чтобы купить</a>
             {% endif %}
+                {% if user.is_authenticated and user.is_editor or user.is_superuser %}
+                    <div class="admin-links" style="margin-top: 10px;">
+                    <a href="{% url 'sneaker_edit' sneaker.id %}">✏️ Редактировать</a>
+                    <a href="{% url 'sneaker_delete' sneaker.id %}" onclick="return confirm('Точно удалить?')">❌ Удалить</a>
+                    </div>
+            {% endif %}
+                    {% if user.is_authenticated and user.is_editor or user.is_superuser %}
+                        <a href="{% url 'sneaker_add' %}">Добавить кроссовки</a>
+                    {% endif %}
         </div>
     {% empty %}
         <p>Товаров не найдено.</p>

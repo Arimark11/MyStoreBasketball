@@ -91,3 +91,12 @@ class JobApplicationForm(forms.ModelForm):
         widgets = {
             'comment': forms.Textarea(attrs={'rows': 3, 'placeholder': 'Ваш комментарий (опционально)'})
         }
+
+class SneakerForm(forms.ModelForm):
+    class Meta:
+        model = Sneaker
+        fields = ['brand', 'model_name', 'category', 'season', 'price', 'description', 'image']
+        widgets = {
+            'description': forms.Textarea(attrs={'rows': 3}),
+            'price': forms.NumberInput(attrs={'step': '0.01'}),
+        }

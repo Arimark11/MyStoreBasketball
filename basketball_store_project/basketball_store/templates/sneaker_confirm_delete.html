@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Удаление кроссовки{% endblock %}
+
+{% block content %}
+<h2>Вы уверены, что хотите удалить "{{ sneaker.brand.name }} {{ sneaker.model_name }}"?</h2>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Да, удалить</button>
+    <a href="{% url 'catalog' %}">Отмена</a>
+</form>
+{% endblock %}

@@ -5,7 +5,7 @@ from datetime import date
 import pytz
 from django.core.validators import ValidationError
 
-# ---------------------- Кастомный пользователь ----------------------
+#Кастомный пользователь
 class User(AbstractUser):
     phone_regex = RegexValidator(
         regex=r'^\+375 \(29\) \d{3}-\d{2}-\d{2}$',
@@ -19,7 +19,7 @@ class User(AbstractUser):
     timezone = models.CharField(
         max_length=50,
         choices=[(tz, tz) for tz in pytz.common_timezones],
-        default='UTC',           # ← обязательно
+        default='UTC',
         verbose_name='Часовой пояс'
     )
 
@@ -38,7 +38,7 @@ class User(AbstractUser):
     def __str__(self):
         return self.username
 
-# ---------------------- Бренд ----------------------
+#Бренд
 class Brand(models.Model):
     name = models.CharField(max_length=100, unique=True)
     country = models.CharField(max_length=100)
@@ -47,7 +47,7 @@ class Brand(models.Model):
     def __str__(self):
         return self.name
 
-# ---------------------- Категория ----------------------
+#Категория
 class Category(models.Model):
     name = models.CharField(max_length=50)
     slug = models.SlugField(unique=True)
@@ -55,7 +55,7 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
-# ---------------------- Кроссовки ----------------------
+#Кроссовки
 class Sneaker(models.Model):
     SEASON_CHOICES = [
         ('summer', 'Лето'),
@@ -75,14 +75,14 @@ class Sneaker(models.Model):
     def __str__(self):
         return f"{self.brand.name} {self.model_name}"
 
-# ---------------------- Размер ----------------------
+#Размер
 class Size(models.Model):
     size = models.PositiveSmallIntegerField(unique=True)
 
     def __str__(self):
         return str(self.size)
 
-# ---------------------- Размер-Кроссовки (промежуточная для ManyToMany с остатком) ----------------------
+#Размер-Кроссовки (промежуточная для ManyToMany с остатком)
 class SneakerSize(models.Model):
     sneaker = models.ForeignKey(Sneaker, on_delete=models.CASCADE, related_name='sizes')
     size = models.ForeignKey(Size, on_delete=models.CASCADE, related_name='sneakers')
@@ -94,7 +94,7 @@ class SneakerSize(models.Model):
     def __str__(self):
         return f"{self.sneaker} - размер {self.size} (остаток: {self.stock})"
 
-# ---------------------- Промокод ----------------------
+#Промокод
 class PromoCode(models.Model):
     code = models.CharField(max_length=50, unique=True)
     discount_percent = models.PositiveSmallIntegerField(default=0, validators=[MinValueValidator(0), MaxValueValidator(100)])
@@ -105,7 +105,7 @@ class PromoCode(models.Model):
     def __str__(self):
         return self.code
 
-# ---------------------- Заказ ----------------------
+#Заказ
 class Order(models.Model):
     STATUS_CHOICES = [
         ('pending', 'Ожидает оплаты'),
@@ -124,7 +124,7 @@ class Order(models.Model):
     def __str__(self):
         return f"Заказ {self.id} от {self.user.username}"
 
-# ---------------------- Товар в заказе ----------------------
+#Товар в заказе
 class OrderItem(models.Model):
     order = models.ForeignKey(Order, on_delete=models.CASCADE, related_name='items')
     sneaker_size = models.ForeignKey(SneakerSize, on_delete=models.CASCADE)
@@ -134,7 +134,7 @@ class OrderItem(models.Model):
     def __str__(self):
         return f"{self.sneaker_size.sneaker} x{self.quantity}"
 
-# ---------------------- Модели для обязательных страниц ----------------------
+#Модели для обязательных страниц
 
 class News(models.Model):
     title = models.CharField(max_length=200)
