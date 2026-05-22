@@ -168,5 +168,10 @@ LOGGING = {
             'level': os.getenv('LOG_LEVEL', 'INFO'),
             'propagate': True,
         },
+        'django.request': {
+            'handlers': ['console'],
+            'level': 'ERROR',
+            'propagate': False,
+        },
     },
 }
