@@ -1,0 +1,2449 @@
+[
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2026-05-16T11:03:55.158Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "1",
+    "object_repr": "ПЕРВЫЙ ПОСТ МОЕГО МАГАЗИНА",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2026-05-16T11:04:39.299Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "1",
+    "object_repr": "ПЕРВЫЙ ПОСТ МОЕГО МАГАЗИНА",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Full text\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2026-05-16T11:22:26.043Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "КРОССОВКИ ДЛЯ КРУТЫХ РЕБЯТ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2026-05-16T11:33:57.667Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "ВИКА",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2026-05-16T11:40:11.769Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "ВИКА",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Photo\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2026-05-16T11:42:00.825Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "КРОССОВКИ ДЛЯ КРУТЫХ РЕБЯТ",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2026-05-16T11:45:39.337Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "2",
+    "object_repr": "АНЯ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2026-05-16T14:35:14.156Z",
+    "user": 1,
+    "content_type": 21,
+    "object_id": "1",
+    "object_repr": "сортировщик на складе",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2026-05-18T16:32:38.749Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "1",
+    "object_repr": "6565",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2026-05-18T16:52:04.105Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "2",
+    "object_repr": "Мы открылись!!",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2026-05-18T16:52:38.966Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "2",
+    "object_repr": "Мы открылись!!",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2026-05-18T17:02:09.116Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "О компании",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2026-05-18T17:04:02.831Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "О компании",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Logo\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2026-05-18T17:08:03.977Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "что лучше NIKE или ADIDAS?",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2026-05-18T17:15:43.966Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "2",
+    "object_repr": "Сколько стоят хорошие кроссовки?",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2026-05-20T19:47:14.206Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "1",
+    "object_repr": "Nike",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2026-05-20T21:14:10.809Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "5",
+    "object_repr": "New Balance",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2026-05-20T21:14:14.721Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "4",
+    "object_repr": "Puma",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2026-05-20T21:14:17.928Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "3",
+    "object_repr": "Jordan",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2026-05-20T21:14:20.586Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "2",
+    "object_repr": "Adidas",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2026-05-20T21:14:23.219Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "1",
+    "object_repr": "Nike",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2026-05-20T21:14:28.299Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "Лимитированные",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2026-05-20T21:14:30.731Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Повседневные",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2026-05-20T21:14:33.242Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Для игры",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2026-05-20T21:14:46.657Z",
+    "user": 1,
+    "content_type": 17,
+    "object_id": "8",
+    "object_repr": "46",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2026-05-20T21:14:49.470Z",
+    "user": 1,
+    "content_type": 17,
+    "object_id": "7",
+    "object_repr": "45",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2026-05-20T21:14:51.832Z",
+    "user": 1,
+    "content_type": 17,
+    "object_id": "6",
+    "object_repr": "44",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2026-05-20T21:14:54.225Z",
+    "user": 1,
+    "content_type": 17,
+    "object_id": "5",
+    "object_repr": "43",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2026-05-20T21:14:56.391Z",
+    "user": 1,
+    "content_type": 17,
+    "object_id": "4",
+    "object_repr": "42",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2026-05-20T21:14:59.720Z",
+    "user": 1,
+    "content_type": 17,
+    "object_id": "3",
+    "object_repr": "41",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2026-05-20T21:15:02.490Z",
+    "user": 1,
+    "content_type": 17,
+    "object_id": "2",
+    "object_repr": "40",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2026-05-20T21:15:05.389Z",
+    "user": 1,
+    "content_type": 17,
+    "object_id": "1",
+    "object_repr": "39",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2026-05-20T21:20:17.598Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "10",
+    "object_repr": "New Balance Fresh Foam BB",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2026-05-20T22:25:02.699Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "2",
+    "object_repr": "Nike LeBron XX",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2026-05-20T22:29:42.671Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "5",
+    "object_repr": "Jordan Why Not .6",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2026-05-20T22:29:53.108Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "4",
+    "object_repr": "Adidas Dame 8",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2026-05-20T22:30:01.991Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "1",
+    "object_repr": "Nike Air Zoom G.T. Cut 2",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2026-05-20T22:30:11.628Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "3",
+    "object_repr": "Adidas Harden Vol. 7",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2026-05-20T22:35:06.929Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "10",
+    "object_repr": "New Balance Fresh Foam BB",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2026-05-20T22:35:23.131Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "9",
+    "object_repr": "New Balance Two WXY v3",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2026-05-20T22:35:34.944Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "8",
+    "object_repr": "Puma Clyde All-Pro",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2026-05-20T22:35:43.599Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "7",
+    "object_repr": "Puma MB.02",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2026-05-20T22:35:51.497Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "6",
+    "object_repr": "Jordan Air Jordan 1 Mid",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2026-05-20T23:48:03.900Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "2",
+    "object_repr": "АНЯ",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2026-05-20T23:51:52.042Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "3",
+    "object_repr": "Dima",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Staff status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2026-05-20T23:55:43.195Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "3",
+    "object_repr": "Dima",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Staff status\", \"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 47,
+  "fields": {
+    "action_time": "2026-05-20T23:55:58.936Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "3",
+    "object_repr": "Dima",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 48,
+  "fields": {
+    "action_time": "2026-05-20T23:58:29.197Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "3",
+    "object_repr": "Dima",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u0442\\u0430\\u0442\\u0443\\u0441 \\u043c\\u0435\\u043d\\u0435\\u0434\\u0436\\u0435\\u0440\\u0430\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 49,
+  "fields": {
+    "action_time": "2026-05-21T00:05:17.894Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "2",
+    "object_repr": "АНЯ",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 50,
+  "fields": {
+    "action_time": "2026-05-21T00:05:17.894Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "ВИКА",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 51,
+  "fields": {
+    "action_time": "2026-05-21T00:05:26.760Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "О компании",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Requisites\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 52,
+  "fields": {
+    "action_time": "2026-05-21T00:13:37.252Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "3",
+    "object_repr": "Dima",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u0442\\u0430\\u0442\\u0443\\u0441 \\u043c\\u0435\\u043d\\u0435\\u0434\\u0436\\u0435\\u0440\\u0430\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 53,
+  "fields": {
+    "action_time": "2026-05-21T00:14:19.956Z",
+    "user": 1,
+    "content_type": 21,
+    "object_id": "1",
+    "object_repr": "Сортировщик на складе",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 54,
+  "fields": {
+    "action_time": "2026-05-21T00:14:53.884Z",
+    "user": 1,
+    "content_type": 21,
+    "object_id": "2",
+    "object_repr": "Менеджер",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 55,
+  "fields": {
+    "action_time": "2026-05-21T00:16:42.120Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "3",
+    "object_repr": "Dima",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u0442\\u0430\\u0442\\u0443\\u0441 \\u043c\\u0435\\u043d\\u0435\\u0434\\u0436\\u0435\\u0440\\u0430\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 56,
+  "fields": {
+    "action_time": "2026-05-21T00:17:50.320Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "4",
+    "object_repr": "Dima",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Photo\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 57,
+  "fields": {
+    "action_time": "2026-05-21T00:17:55.611Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "3",
+    "object_repr": "Anna",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Photo\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 58,
+  "fields": {
+    "action_time": "2026-05-21T00:19:27.434Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "4",
+    "object_repr": "Dima",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Photo\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 59,
+  "fields": {
+    "action_time": "2026-05-21T00:42:07.217Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "5",
+    "object_repr": "Egor",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 60,
+  "fields": {
+    "action_time": "2026-05-21T00:50:37.347Z",
+    "user": 1,
+    "content_type": 21,
+    "object_id": "3",
+    "object_repr": "Работник склада",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 61,
+  "fields": {
+    "action_time": "2026-05-21T00:50:40.907Z",
+    "user": 1,
+    "content_type": 21,
+    "object_id": "3",
+    "object_repr": "Работник склада",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 62,
+  "fields": {
+    "action_time": "2026-05-21T00:52:05.317Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "6",
+    "object_repr": "Vika",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u043e\\u0442\\u0440\\u0443\\u0434\\u043d\\u0438\\u043a \\u0441\\u043a\\u043b\\u0430\\u0434\\u0430\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 63,
+  "fields": {
+    "action_time": "2026-05-21T01:06:08.154Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "8",
+    "object_repr": "Anton",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 64,
+  "fields": {
+    "action_time": "2026-05-21T01:06:08.154Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "7",
+    "object_repr": "Max",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 65,
+  "fields": {
+    "action_time": "2026-05-21T01:06:08.154Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "6",
+    "object_repr": "Vika",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 66,
+  "fields": {
+    "action_time": "2026-05-21T01:22:14.826Z",
+    "user": 1,
+    "content_type": 21,
+    "object_id": "4",
+    "object_repr": "Работник сайта",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 67,
+  "fields": {
+    "action_time": "2026-05-21T01:44:00.379Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "2",
+    "object_repr": "Nike LeBron XX",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 68,
+  "fields": {
+    "action_time": "2026-05-21T01:44:10.170Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "3",
+    "object_repr": "Появилась новая модель",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 69,
+  "fields": {
+    "action_time": "2026-05-21T02:09:21.175Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "1",
+    "object_repr": "Политика конфиденциальности",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "6ym4h64fcqvfqa9ubda64160w9604ctb",
+  "fields": {
+    "session_data": ".eJxVjDEOgzAMAP_iuYoSNyGBsTtvQHbsFNoKJAJT1b9XSAztene6Nwy0b-OwV12HSaADB5dfxpSfOh9CHjTfF5OXeVsnNkdiTltNv4i-bmf7NxipjtABB7QZOTWxtJK1tUWwcVGZnZDzGnzJqUneC6KNaqlkCoxXDIQtosDnC_SIOB8:1wPqhH:OuAiXb7lF9dGDedaZ_EDZ_2vQbOnOfhJWvBWI6CSIIw",
+    "expire_date": "2026-06-03T23:51:31.220Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "c3nvalfsfdxbqx8np6x0ffkdjh3w6m83",
+  "fields": {
+    "session_data": ".eJxVjEkKAjEUBe-StQRipq9L954h_AnTKgn0sGq8uwR6odtXVW83Bbe1lm3RuUxirgbM6Xcj5Je2AeSJ7dEt97bOE9mh2IMu9t5F37fD_TuouNRRn5kS8CUCKaYYBZxj9Zg5A2jwCVzSEBFcZk1ZgAiSeA4BxSsF8_kC8684UQ:1wPrmZ:g-PSv03M_NknSB46ksvGNpPOm-mLHhgPL8lB2yAuzVo",
+    "expire_date": "2026-06-04T01:01:03.446Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ob6bg8edn6fpjfh2lse8cqnaea7bvng2",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQAP-yZ0MWSoH26N03kN0FpGrapLQn499Nkx70OjOZN0Tatxr3ltc4JRhBI1x-IZM883yY9KD5vihZ5m2dWB2JOm1TtyXl1_Vs_waVWoURhIwx2gkXpj5ldKR9yg7RYCeBMA9O-64XH4K1LGi196VwSEYPjkng8wUL9zgZ:1wQ0OT:1UC-11_bDBYyI-yZgOsSwTuqm7H8xHvGJA0SN1GB93U",
+    "expire_date": "2026-06-04T10:12:45.499Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "wyeb8u6vstfcyfeynvvkr4fa4yoi179q",
+  "fields": {
+    "session_data": ".eJxVjDEOgzAMAP_iuYoSNyGBsTtvQHbsFNoKJAJT1b9XSAztene6Nwy0b-OwV12HSaADB5dfxpSfOh9CHjTfF5OXeVsnNkdiTltNv4i-bmf7NxipjtABB7QZOTWxtJK1tUWwcVGZnZDzGnzJqUneC6KNaqlkCoxXDIQtosDnC_SIOB8:1wP0Lh:xDEEPTmpkasSgMmjvBcUDbHzqTP-8XLMAoNt3xJDzAs",
+    "expire_date": "2026-06-01T15:57:45.734Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "xdh6yk3cehnairctnm5i1lsuu7b3zaoa",
+  "fields": {
+    "session_data": ".eJxVjDEOgzAMAP_iuYoSNyGBsTtvQHbsFNoKJAJT1b9XSAztene6Nwy0b-OwV12HSaADB5dfxpSfOh9CHjTfF5OXeVsnNkdiTltNv4i-bmf7NxipjtABB7QZOTWxtJK1tUWwcVGZnZDzGnzJqUneC6KNaqlkCoxXDIQtosDnC_SIOB8:1wOCc5:OSCijxMnP5GvZQCOe9BlruBDbqpALuSxnyvBvKXnLJc",
+    "expire_date": "2026-05-30T10:51:21.009Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "zxru1xj81awpuqi2olm72yhkyq0hchdg",
+  "fields": {
+    "session_data": ".eJxVjDEOgzAMAP_iuYoSNyGBsTtvQHbsFNoKJAJT1b9XSAztene6Nwy0b-OwV12HSaADB5dfxpSfOh9CHjTfF5OXeVsnNkdiTltNv4i-bmf7NxipjtABB7QZOTWxtJK1tUWwcVGZnZDzGnzJqUneC6KNaqlkCoxXDIQtosDnC_SIOB8:1wPtTJ:qyYoCf4lHozzlTl6S0DKEzaMHp8WPbJ_e86Fq47Ci8A",
+    "expire_date": "2026-06-04T02:49:17.162Z"
+  }
+},
+{
+  "model": "store.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$yac7VcJ1WLHPUiCibx4h9E$4KlZZvThaUsKHxFORRaVttp2GanIjgBLSZL9Rvl8Jc4=",
+    "last_login": "2026-05-21T10:15:24.443Z",
+    "is_superuser": true,
+    "username": "Arimark",
+    "first_name": "",
+    "last_name": "",
+    "email": "erm4kowe@yandex.ru",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-05-16T10:49:38.498Z",
+    "phone": "+375 (29) 719-62-77",
+    "birth_date": "2005-04-12",
+    "is_manager": false,
+    "is_warehouse": false,
+    "is_editor": false,
+    "timezone": "Europe/Minsk",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "store.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$4Pdbx6H0EC13wb7YOsfzbr$USF0KNcZqmlgi+tHvuMx8Xy1pVh3EgxO24S9pudb5K0=",
+    "last_login": "2026-05-20T23:43:50.210Z",
+    "is_superuser": false,
+    "username": "Maxim",
+    "first_name": "",
+    "last_name": "",
+    "email": "maxim@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-18T16:29:50.731Z",
+    "phone": "+375 (29) 888-88-88",
+    "birth_date": "2003-02-22",
+    "is_manager": false,
+    "is_warehouse": false,
+    "is_editor": false,
+    "timezone": "UTC",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "store.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$5VjvSJfnKb5Mr3qGTm6yzq$0UxcQgThb42qF9zGH4PjRGh7JSwHRys91FQKAU8++5o=",
+    "last_login": "2026-05-21T02:49:03.521Z",
+    "is_superuser": false,
+    "username": "Dima",
+    "first_name": "",
+    "last_name": "",
+    "email": "dima@yandex.ru",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-20T23:51:11Z",
+    "phone": "+375 (29) 888-88-89",
+    "birth_date": "2000-10-18",
+    "is_manager": true,
+    "is_warehouse": false,
+    "is_editor": false,
+    "timezone": "UTC",
+    "groups": [],
+    "user_permissions": [
+      57
+    ]
+  }
+},
+{
+  "model": "store.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$axYUfBlyrL32UoaDOSZhfN$7d5xPQTZl09fzW5mbay8q6p2IBG1Z258xw8KEUBUYN8=",
+    "last_login": "2026-05-21T10:14:43.950Z",
+    "is_superuser": false,
+    "username": "Anna",
+    "first_name": "",
+    "last_name": "",
+    "email": "annagb@yandex.ru",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-21T00:06:54.362Z",
+    "phone": "+375 (29) 888-99-88",
+    "birth_date": "2003-09-16",
+    "is_manager": false,
+    "is_warehouse": false,
+    "is_editor": true,
+    "timezone": "UTC",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "store.user",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$1ksJ7H7PnpQWslAqQpXubf$P0JtTGNT6XpJG5pNIiR7boKc6E94IJPtVlAT3HLQ648=",
+    "last_login": "2026-05-21T00:21:54.246Z",
+    "is_superuser": false,
+    "username": "Egor",
+    "first_name": "",
+    "last_name": "",
+    "email": "egor@yandex.ru",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-21T00:21:06.123Z",
+    "phone": "+375 (29) 888-88-77",
+    "birth_date": "2005-06-22",
+    "is_manager": true,
+    "is_warehouse": false,
+    "is_editor": false,
+    "timezone": "UTC",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "store.user",
+  "pk": 9,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$ZRR7xWXzdCktlRkNTIwoWk$g2xWzXJHX4W8Ss0VaEbMkOMlohJ+s4eGTmJX0/ZCiAA=",
+    "last_login": "2026-05-21T01:07:54.899Z",
+    "is_superuser": false,
+    "username": "Anton",
+    "first_name": "",
+    "last_name": "",
+    "email": "anton@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-21T01:07:14.528Z",
+    "phone": "+375 (29) 888-82-22",
+    "birth_date": "2003-02-12",
+    "is_manager": false,
+    "is_warehouse": true,
+    "is_editor": false,
+    "timezone": "UTC",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "store.user",
+  "pk": 10,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$d4AEoISqV1VIK8R08YydkW$LhWEbfPBYgXdlKIddqtz0SyXnddy5YvwUw6Zt23OPGE=",
+    "last_login": "2026-05-21T10:12:46.226Z",
+    "is_superuser": false,
+    "username": "Vika",
+    "first_name": "",
+    "last_name": "",
+    "email": "vika@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-21T01:09:00.932Z",
+    "phone": "+375 (29) 888-82-20",
+    "birth_date": "2006-02-12",
+    "is_manager": false,
+    "is_warehouse": false,
+    "is_editor": false,
+    "timezone": "UTC",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "store.user",
+  "pk": 11,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$bK3e5r57sDpbHzMAmjRq0U$+RbV7c1hwshR92+cO/onKzHvYMeuHDjDl8q6nnFoqNM=",
+    "last_login": "2026-05-21T01:26:03.824Z",
+    "is_superuser": false,
+    "username": "vova",
+    "first_name": "",
+    "last_name": "",
+    "email": "vova@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-21T01:25:08.147Z",
+    "phone": "+375 (29) 888-11-99",
+    "birth_date": "2004-02-12",
+    "is_manager": false,
+    "is_warehouse": false,
+    "is_editor": true,
+    "timezone": "UTC",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "store.brand",
+  "pk": 6,
+  "fields": {
+    "name": "Nike",
+    "country": "USA",
+    "logo": ""
+  }
+},
+{
+  "model": "store.brand",
+  "pk": 7,
+  "fields": {
+    "name": "Adidas",
+    "country": "Germany",
+    "logo": ""
+  }
+},
+{
+  "model": "store.brand",
+  "pk": 8,
+  "fields": {
+    "name": "Jordan",
+    "country": "USA",
+    "logo": ""
+  }
+},
+{
+  "model": "store.brand",
+  "pk": 9,
+  "fields": {
+    "name": "Puma",
+    "country": "Germany",
+    "logo": ""
+  }
+},
+{
+  "model": "store.brand",
+  "pk": 10,
+  "fields": {
+    "name": "New Balance",
+    "country": "USA",
+    "logo": ""
+  }
+},
+{
+  "model": "store.category",
+  "pk": 4,
+  "fields": {
+    "name": "Для игры",
+    "slug": "playing"
+  }
+},
+{
+  "model": "store.category",
+  "pk": 5,
+  "fields": {
+    "name": "Повседневные",
+    "slug": "casual"
+  }
+},
+{
+  "model": "store.category",
+  "pk": 6,
+  "fields": {
+    "name": "Лимитированные",
+    "slug": "limited"
+  }
+},
+{
+  "model": "store.sneaker",
+  "pk": 1,
+  "fields": {
+    "model_name": "Air Zoom G.T. Cut 2",
+    "brand": 6,
+    "category": 4,
+    "season": "summer",
+    "price": "15999.00",
+    "description": "Отличные игровые кроссовки для быстрого старта",
+    "image": "sneakers/Nike_Air_Zoom_G.T._Cut_2.jpg",
+    "created_at": "2026-05-20T21:15:48.020Z",
+    "updated_at": "2026-05-20T22:30:01.989Z"
+  }
+},
+{
+  "model": "store.sneaker",
+  "pk": 2,
+  "fields": {
+    "model_name": "LeBron XX",
+    "brand": 6,
+    "category": 4,
+    "season": "winter",
+    "price": "18999.00",
+    "description": "Поддержка и амортизация для мощных игроков",
+    "image": "sneakers/Nike_LeBron_XX_wb50pt8.jpg",
+    "created_at": "2026-05-20T21:15:48.066Z",
+    "updated_at": "2026-05-21T01:44:00.377Z"
+  }
+},
+{
+  "model": "store.sneaker",
+  "pk": 3,
+  "fields": {
+    "model_name": "Harden Vol. 7",
+    "brand": 7,
+    "category": 4,
+    "season": "summer",
+    "price": "14999.00",
+    "description": "Созданы для резких манёвров",
+    "image": "sneakers/Adidas_Harden_Vol._7.jpg",
+    "created_at": "2026-05-20T21:15:48.112Z",
+    "updated_at": "2026-05-20T22:30:11.625Z"
+  }
+},
+{
+  "model": "store.sneaker",
+  "pk": 4,
+  "fields": {
+    "model_name": "Dame 8",
+    "brand": 7,
+    "category": 4,
+    "season": "all_season",
+    "price": "12999.00",
+    "description": "Универсальные кроссовки для ежедневных тренировок",
+    "image": "sneakers/Adidas_Dame_8.jpg",
+    "created_at": "2026-05-20T21:15:48.174Z",
+    "updated_at": "2026-05-20T22:29:53.106Z"
+  }
+},
+{
+  "model": "store.sneaker",
+  "pk": 5,
+  "fields": {
+    "model_name": "Why Not .6",
+    "brand": 8,
+    "category": 4,
+    "season": "summer",
+    "price": "16999.00",
+    "description": "Лёгкие и отзывчивые, стиль Рассела Уэстбрука",
+    "image": "sneakers/Jordan_Why_Not_.6.jpg",
+    "created_at": "2026-05-20T21:15:48.223Z",
+    "updated_at": "2026-05-20T22:29:42.669Z"
+  }
+},
+{
+  "model": "store.sneaker",
+  "pk": 6,
+  "fields": {
+    "model_name": "Air Jordan 1 Mid",
+    "brand": 8,
+    "category": 5,
+    "season": "all_season",
+    "price": "11999.00",
+    "description": "Классика для улицы и баскетбольной площадки",
+    "image": "sneakers/Jordan_Air_Jordan_1_Mid.jpg",
+    "created_at": "2026-05-20T21:15:48.268Z",
+    "updated_at": "2026-05-20T22:35:51.495Z"
+  }
+},
+{
+  "model": "store.sneaker",
+  "pk": 7,
+  "fields": {
+    "model_name": "MB.02",
+    "brand": 9,
+    "category": 4,
+    "season": "summer",
+    "price": "13999.00",
+    "description": "Подпись Ламело Болла, яркий дизайн",
+    "image": "sneakers/Puma_MB.02.jpg",
+    "created_at": "2026-05-20T21:15:48.311Z",
+    "updated_at": "2026-05-20T22:35:43.597Z"
+  }
+},
+{
+  "model": "store.sneaker",
+  "pk": 8,
+  "fields": {
+    "model_name": "Clyde All-Pro",
+    "brand": 9,
+    "category": 4,
+    "season": "all_season",
+    "price": "10999.00",
+    "description": "Проверенные временем, отличный контроль",
+    "image": "sneakers/Puma_Clyde_All-Pro.jpg",
+    "created_at": "2026-05-20T21:15:48.357Z",
+    "updated_at": "2026-05-20T22:35:34.942Z"
+  }
+},
+{
+  "model": "store.sneaker",
+  "pk": 9,
+  "fields": {
+    "model_name": "Two WXY v3",
+    "brand": 10,
+    "category": 4,
+    "season": "summer",
+    "price": "14499.00",
+    "description": "Сбалансированные для универсалов",
+    "image": "sneakers/New_Balance_Two_WXY_v3.jpg",
+    "created_at": "2026-05-20T21:15:48.403Z",
+    "updated_at": "2026-05-20T22:35:23.129Z"
+  }
+},
+{
+  "model": "store.sneaker",
+  "pk": 10,
+  "fields": {
+    "model_name": "Fresh Foam BB",
+    "brand": 10,
+    "category": 5,
+    "season": "all_season",
+    "price": "9999.00",
+    "description": "Комфорт на каждый день",
+    "image": "sneakers/New_Balance_Fresh_Foam_BB.jpg",
+    "created_at": "2026-05-20T21:15:48.452Z",
+    "updated_at": "2026-05-20T22:35:06.927Z"
+  }
+},
+{
+  "model": "store.sneaker",
+  "pk": 11,
+  "fields": {
+    "model_name": "Hyperdunk",
+    "brand": 6,
+    "category": 4,
+    "season": "summer",
+    "price": "14999.00",
+    "description": "Хорошие кроссовки",
+    "image": "sneakers/hyperdunk.jpg",
+    "created_at": "2026-05-22T07:21:04.388Z",
+    "updated_at": "2026-05-22T07:21:04.388Z"
+  }
+},
+{
+  "model": "store.size",
+  "pk": 9,
+  "fields": {
+    "size": 39
+  }
+},
+{
+  "model": "store.size",
+  "pk": 10,
+  "fields": {
+    "size": 40
+  }
+},
+{
+  "model": "store.size",
+  "pk": 11,
+  "fields": {
+    "size": 41
+  }
+},
+{
+  "model": "store.size",
+  "pk": 12,
+  "fields": {
+    "size": 42
+  }
+},
+{
+  "model": "store.size",
+  "pk": 13,
+  "fields": {
+    "size": 43
+  }
+},
+{
+  "model": "store.size",
+  "pk": 14,
+  "fields": {
+    "size": 44
+  }
+},
+{
+  "model": "store.size",
+  "pk": 15,
+  "fields": {
+    "size": 45
+  }
+},
+{
+  "model": "store.size",
+  "pk": 16,
+  "fields": {
+    "size": 46
+  }
+},
+{
+  "model": "store.sneakersize",
+  "pk": 1,
+  "fields": {
+    "sneaker": 1,
+    "size": 10,
+    "stock": 3
+  }
+},
+{
+  "model": "store.sneakersize",
+  "pk": 2,
+  "fields": {
+    "sneaker": 1,
+    "size": 11,
+    "stock": 3
+  }
+},
+{
+  "model": "store.sneakersize",
+  "pk": 3,
+  "fields": {
+    "sneaker": 1,
+    "size": 12,
+    "stock": 3
+  }
+},
+{
+  "model": "store.sneakersize",
+  "pk": 4,
+  "fields": {
+    "sneaker": 1,
+    "size": 13,
+    "stock": 3
+  }
+},
+{
+  "model": "store.sneakersize",
+  "pk": 5,
+  "fields": {
+    "sneaker": 1,
+    "size": 14,
+    "stock": 3
+  }
+},
+{
+  "model": "store.sneakersize",
+  "pk": 6,
+  "fields": {
+    "sneaker": 1,
+    "size": 15,
+    "stock": 3
+  }
+},
+{
+  "model": "store.sneakersize",
+  "pk": 7,
+  "fields": {
+    "sneaker": 2,
+    "size": 10,
+    "stock": 3
+  }
+},
+{
+  "model": "store.sneakersize",
+  "pk": 8,
+  "fields": {
+    "sneaker": 2,
+    "size": 11,
+    "stock": 3
+  }
+},
+{
+  "model": "store.sneakersize",
+  "pk": 9,
+  "fields": {
+    "sneaker": 2,
+    "size": 12,
+    "stock": 3
+  }
+},
+{
+  "model": "store.sneakersize",
+  "pk": 10,
+  "fields": {
+    "sneaker": 2,
+    "size": 13,
+    "stock": 3
+  }
+},
+{
+  "model": "store.sneakersize",
+  "pk": 11,
+  "fields": {
+    "sneaker": 2,
+    "size": 14,
+    "stock": 3
+  }
+},
+{
+  "model": "store.sneakersize",
+  "pk": 12,
+  "fields": {
+    "sneaker": 2,
+    "size": 15,
+    "stock": 3
+  }
+},
+{
+  "model": "store.sneakersize",
+  "pk": 13,
+  "fields": {
+    "sneaker": 3,
+    "size": 10,
+    "stock": 3
+  }
+},
+{
+  "model": "store.sneakersize",
+  "pk": 14,
+  "fields": {
+    "sneaker": 3,
+    "size": 11,
+    "stock": 3
+  }
+},
+{
+  "model": "store.sneakersize",
+  "pk": 15,
+  "fields": {
+    "sneaker": 3,
+    "size": 12,
+    "stock": 3
+  }
+},
+{
+  "model": "store.sneakersize",
+  "pk": 16,
+  "fields": {
+    "sneaker": 3,
+    "size": 13,
+    "stock": 3
+  }
+},
+{
+  "model": "store.sneakersize",
+  "pk": 17,
+  "fields": {
+    "sneaker": 3,
+    "size": 14,
+    "stock": 3
+  }
+},
+{
+  "model": "store.sneakersize",
+  "pk": 18,
+  "fields": {
+    "sneaker": 3,
+    "size": 15,
+    "stock": 3
+  }
+},
+{
+  "model": "store.sneakersize",
+  "pk": 19,
+  "fields": {
+    "sneaker": 4,
+    "size": 10,
+    "stock": 3
+  }
+},
+{
+  "model": "store.sneakersize",
+  "pk": 20,
+  "fields": {
+    "sneaker": 4,
+    "size": 11,
+    "stock": 3
+  }
+},
+{
+  "model": "store.sneakersize",
+  "pk": 21,
+  "fields": {
+    "sneaker": 4,
+    "size": 12,
+    "stock": 3
+  }
+},
+{
+  "model": "store.sneakersize",
+  "pk": 22,
+  "fields": {
+    "sneaker": 4,
+    "size": 13,
+    "stock": 3
+  }
+},
+{
+  "model": "store.sneakersize",
+  "pk": 23,
+  "fields": {
+    "sneaker": 4,
+    "size": 14,
+    "stock": 3
+  }
+},
+{
+  "model": "store.sneakersize",
+  "pk": 24,
+  "fields": {
+    "sneaker": 4,
+    "size": 15,
+    "stock": 3
+  }
+},
+{
+  "model": "store.sneakersize",
+  "pk": 25,
+  "fields": {
+    "sneaker": 5,
+    "size": 10,
+    "stock": 3
+  }
+},
+{
+  "model": "store.sneakersize",
+  "pk": 26,
+  "fields": {
+    "sneaker": 5,
+    "size": 11,
+    "stock": 3
+  }
+},
+{
+  "model": "store.sneakersize",
+  "pk": 27,
+  "fields": {
+    "sneaker": 5,
+    "size": 12,
+    "stock": 3
+  }
+},
+{
+  "model": "store.sneakersize",
+  "pk": 28,
+  "fields": {
+    "sneaker": 5,
+    "size": 13,
+    "stock": 3
+  }
+},
+{
+  "model": "store.sneakersize",
+  "pk": 29,
+  "fields": {
+    "sneaker": 5,
+    "size": 14,
+    "stock": 3
+  }
+},
+{
+  "model": "store.sneakersize",
+  "pk": 30,
+  "fields": {
+    "sneaker": 5,
+    "size": 15,
+    "stock": 3
+  }
+},
+{
+  "model": "store.sneakersize",
+  "pk": 31,
+  "fields": {
+    "sneaker": 6,
+    "size": 10,
+    "stock": 3
+  }
+},
+{
+  "model": "store.sneakersize",
+  "pk": 32,
+  "fields": {
+    "sneaker": 6,
+    "size": 11,
+    "stock": 3
+  }
+},
+{
+  "model": "store.sneakersize",
+  "pk": 33,
+  "fields": {
+    "sneaker": 6,
+    "size": 12,
+    "stock": 3
+  }
+},
+{
+  "model": "store.sneakersize",
+  "pk": 34,
+  "fields": {
+    "sneaker": 6,
+    "size": 13,
+    "stock": 3
+  }
+},
+{
+  "model": "store.sneakersize",
+  "pk": 35,
+  "fields": {
+    "sneaker": 6,
+    "size": 14,
+    "stock": 3
+  }
+},
+{
+  "model": "store.sneakersize",
+  "pk": 36,
+  "fields": {
+    "sneaker": 6,
+    "size": 15,
+    "stock": 3
+  }
+},
+{
+  "model": "store.sneakersize",
+  "pk": 37,
+  "fields": {
+    "sneaker": 7,
+    "size": 10,
+    "stock": 3
+  }
+},
+{
+  "model": "store.sneakersize",
+  "pk": 38,
+  "fields": {
+    "sneaker": 7,
+    "size": 11,
+    "stock": 3
+  }
+},
+{
+  "model": "store.sneakersize",
+  "pk": 39,
+  "fields": {
+    "sneaker": 7,
+    "size": 12,
+    "stock": 3
+  }
+},
+{
+  "model": "store.sneakersize",
+  "pk": 40,
+  "fields": {
+    "sneaker": 7,
+    "size": 13,
+    "stock": 3
+  }
+},
+{
+  "model": "store.sneakersize",
+  "pk": 41,
+  "fields": {
+    "sneaker": 7,
+    "size": 14,
+    "stock": 3
+  }
+},
+{
+  "model": "store.sneakersize",
+  "pk": 42,
+  "fields": {
+    "sneaker": 7,
+    "size": 15,
+    "stock": 3
+  }
+},
+{
+  "model": "store.sneakersize",
+  "pk": 43,
+  "fields": {
+    "sneaker": 8,
+    "size": 10,
+    "stock": 3
+  }
+},
+{
+  "model": "store.sneakersize",
+  "pk": 44,
+  "fields": {
+    "sneaker": 8,
+    "size": 11,
+    "stock": 3
+  }
+},
+{
+  "model": "store.sneakersize",
+  "pk": 45,
+  "fields": {
+    "sneaker": 8,
+    "size": 12,
+    "stock": 3
+  }
+},
+{
+  "model": "store.sneakersize",
+  "pk": 46,
+  "fields": {
+    "sneaker": 8,
+    "size": 13,
+    "stock": 3
+  }
+},
+{
+  "model": "store.sneakersize",
+  "pk": 47,
+  "fields": {
+    "sneaker": 8,
+    "size": 14,
+    "stock": 3
+  }
+},
+{
+  "model": "store.sneakersize",
+  "pk": 48,
+  "fields": {
+    "sneaker": 8,
+    "size": 15,
+    "stock": 3
+  }
+},
+{
+  "model": "store.sneakersize",
+  "pk": 49,
+  "fields": {
+    "sneaker": 9,
+    "size": 10,
+    "stock": 3
+  }
+},
+{
+  "model": "store.sneakersize",
+  "pk": 50,
+  "fields": {
+    "sneaker": 9,
+    "size": 11,
+    "stock": 3
+  }
+},
+{
+  "model": "store.sneakersize",
+  "pk": 51,
+  "fields": {
+    "sneaker": 9,
+    "size": 12,
+    "stock": 3
+  }
+},
+{
+  "model": "store.sneakersize",
+  "pk": 52,
+  "fields": {
+    "sneaker": 9,
+    "size": 13,
+    "stock": 3
+  }
+},
+{
+  "model": "store.sneakersize",
+  "pk": 53,
+  "fields": {
+    "sneaker": 9,
+    "size": 14,
+    "stock": 3
+  }
+},
+{
+  "model": "store.sneakersize",
+  "pk": 54,
+  "fields": {
+    "sneaker": 9,
+    "size": 15,
+    "stock": 3
+  }
+},
+{
+  "model": "store.sneakersize",
+  "pk": 55,
+  "fields": {
+    "sneaker": 10,
+    "size": 10,
+    "stock": 3
+  }
+},
+{
+  "model": "store.sneakersize",
+  "pk": 56,
+  "fields": {
+    "sneaker": 10,
+    "size": 11,
+    "stock": 3
+  }
+},
+{
+  "model": "store.sneakersize",
+  "pk": 57,
+  "fields": {
+    "sneaker": 10,
+    "size": 12,
+    "stock": 3
+  }
+},
+{
+  "model": "store.sneakersize",
+  "pk": 58,
+  "fields": {
+    "sneaker": 10,
+    "size": 13,
+    "stock": 3
+  }
+},
+{
+  "model": "store.sneakersize",
+  "pk": 59,
+  "fields": {
+    "sneaker": 10,
+    "size": 14,
+    "stock": 3
+  }
+},
+{
+  "model": "store.sneakersize",
+  "pk": 60,
+  "fields": {
+    "sneaker": 10,
+    "size": 15,
+    "stock": 3
+  }
+},
+{
+  "model": "store.promocode",
+  "pk": 1,
+  "fields": {
+    "code": "6565",
+    "discount_percent": 10,
+    "valid_from": "2026-05-18T16:32:20Z",
+    "valid_to": "2026-05-18T22:32:27Z",
+    "is_active": true
+  }
+},
+{
+  "model": "store.order",
+  "pk": 1,
+  "fields": {
+    "user": 2,
+    "created_at": "2026-05-20T22:22:47.950Z",
+    "updated_at": "2026-05-20T23:58:46.880Z",
+    "status": "pending",
+    "promo": null,
+    "total_amount": "9999.00"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 2,
+  "fields": {
+    "user": 1,
+    "created_at": "2026-05-20T22:36:47.517Z",
+    "updated_at": "2026-05-20T23:41:37.819Z",
+    "status": "paid",
+    "promo": null,
+    "total_amount": "14999.00"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 3,
+  "fields": {
+    "user": 5,
+    "created_at": "2026-05-21T00:27:38.623Z",
+    "updated_at": "2026-05-21T00:27:46.311Z",
+    "status": "delivered",
+    "promo": null,
+    "total_amount": "15999.00"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 4,
+  "fields": {
+    "user": 5,
+    "created_at": "2026-05-21T00:36:18.332Z",
+    "updated_at": "2026-05-21T00:36:24.273Z",
+    "status": "paid",
+    "promo": null,
+    "total_amount": "15999.00"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 5,
+  "fields": {
+    "user": 5,
+    "created_at": "2026-05-21T00:36:43.247Z",
+    "updated_at": "2026-05-21T00:36:48.137Z",
+    "status": "paid",
+    "promo": null,
+    "total_amount": "31998.00"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 6,
+  "fields": {
+    "user": 1,
+    "created_at": "2026-05-21T01:35:46.390Z",
+    "updated_at": "2026-05-21T01:35:54.272Z",
+    "status": "paid",
+    "promo": null,
+    "total_amount": "15999.00"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 7,
+  "fields": {
+    "user": 4,
+    "created_at": "2026-05-21T02:48:56.111Z",
+    "updated_at": "2026-05-21T02:49:08.416Z",
+    "status": "paid",
+    "promo": null,
+    "total_amount": "15999.00"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 8,
+  "fields": {
+    "user": 1,
+    "created_at": "2026-05-21T10:17:19.254Z",
+    "updated_at": "2026-05-21T10:17:24.260Z",
+    "status": "paid",
+    "promo": null,
+    "total_amount": "31998.00"
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 1,
+  "fields": {
+    "order": 1,
+    "sneaker_size": 55,
+    "quantity": 1,
+    "price_at_time": "9999.00"
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 2,
+  "fields": {
+    "order": 2,
+    "sneaker_size": 13,
+    "quantity": 1,
+    "price_at_time": "14999.00"
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 3,
+  "fields": {
+    "order": 3,
+    "sneaker_size": 3,
+    "quantity": 1,
+    "price_at_time": "15999.00"
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 4,
+  "fields": {
+    "order": 4,
+    "sneaker_size": 1,
+    "quantity": 1,
+    "price_at_time": "15999.00"
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 5,
+  "fields": {
+    "order": 5,
+    "sneaker_size": 1,
+    "quantity": 2,
+    "price_at_time": "15999.00"
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 6,
+  "fields": {
+    "order": 6,
+    "sneaker_size": 1,
+    "quantity": 1,
+    "price_at_time": "15999.00"
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 7,
+  "fields": {
+    "order": 7,
+    "sneaker_size": 2,
+    "quantity": 1,
+    "price_at_time": "15999.00"
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 8,
+  "fields": {
+    "order": 8,
+    "sneaker_size": 3,
+    "quantity": 1,
+    "price_at_time": "15999.00"
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 9,
+  "fields": {
+    "order": 8,
+    "sneaker_size": 2,
+    "quantity": 1,
+    "price_at_time": "15999.00"
+  }
+},
+{
+  "model": "store.news",
+  "pk": 2,
+  "fields": {
+    "title": "Мы открылись!!",
+    "summary": "Arimark",
+    "full_text": "режим работы: 24/7",
+    "image": "news/лого.jpg",
+    "created_at": "2026-05-18T16:52:04.103Z"
+  }
+},
+{
+  "model": "store.news",
+  "pk": 3,
+  "fields": {
+    "title": "Появилась новая модель",
+    "summary": "Arimark",
+    "full_text": "Nike LeBron XX - супер цена!!!",
+    "image": "news/Nike_LeBron_XX_9WkL8gi.jpg",
+    "created_at": "2026-05-21T01:39:13.614Z"
+  }
+},
+{
+  "model": "store.glossaryterm",
+  "pk": 1,
+  "fields": {
+    "term": "что лучше NIKE или ADIDAS?",
+    "definition": "Мы всегда рекомендуем NIKE",
+    "added_at": "2026-05-18T17:08:03.975Z"
+  }
+},
+{
+  "model": "store.glossaryterm",
+  "pk": 2,
+  "fields": {
+    "term": "Сколько стоят хорошие кроссовки?",
+    "definition": "Мы считаем что хорошие кроссовки начинаются от 7000 рублей!",
+    "added_at": "2026-05-18T17:15:43.964Z"
+  }
+},
+{
+  "model": "store.employee",
+  "pk": 3,
+  "fields": {
+    "user": 4,
+    "photo": "employees/anna_sotr.jpg",
+    "name": "Anna",
+    "position": "Работник сайта",
+    "phone": "+375 (29) 888-99-88",
+    "email": "annagb@yandex.ru",
+    "description": "Принят на вакансию Работник сайта"
+  }
+},
+{
+  "model": "store.employee",
+  "pk": 4,
+  "fields": {
+    "user": 3,
+    "photo": "employees/dima_sotr_iguIPoD.jpg",
+    "name": "Dima",
+    "position": "Менеджер",
+    "phone": "+375 (29) 888-88-89",
+    "email": "dima@yandex.ru",
+    "description": "Принят на вакансию Менеджер"
+  }
+},
+{
+  "model": "store.employee",
+  "pk": 5,
+  "fields": {
+    "user": 5,
+    "photo": "",
+    "name": "Egor",
+    "position": "Менеджер",
+    "phone": "+375 (29) 888-88-77",
+    "email": "egor@yandex.ru",
+    "description": "Принят на вакансию Менеджер"
+  }
+},
+{
+  "model": "store.employee",
+  "pk": 8,
+  "fields": {
+    "user": 9,
+    "photo": "",
+    "name": "Anton",
+    "position": "Работник склада",
+    "phone": "+375 (29) 888-82-22",
+    "email": "anton@gmail.com",
+    "description": "Принят на вакансию Работник склада"
+  }
+},
+{
+  "model": "store.employee",
+  "pk": 9,
+  "fields": {
+    "user": 10,
+    "photo": "",
+    "name": "Vika",
+    "position": "Сортировщик на складе",
+    "phone": "+375 (29) 888-82-20",
+    "email": "vika@gmail.com",
+    "description": "Принят на вакансию Сортировщик на складе"
+  }
+},
+{
+  "model": "store.employee",
+  "pk": 10,
+  "fields": {
+    "user": 11,
+    "photo": "",
+    "name": "vova",
+    "position": "Работник сайта",
+    "phone": "+375 (29) 888-11-99",
+    "email": "vova@gmail.com",
+    "description": "Принят на вакансию Работник сайта"
+  }
+},
+{
+  "model": "store.vacancy",
+  "pk": 1,
+  "fields": {
+    "title": "Сортировщик на складе",
+    "description": "5 дней в неделю на складе \r\nЗП мало",
+    "posted_at": "2026-05-16T14:35:14.152Z"
+  }
+},
+{
+  "model": "store.vacancy",
+  "pk": 2,
+  "fields": {
+    "title": "Менеджер",
+    "description": "7 дней в неделю \r\nЗП - 45т/р",
+    "posted_at": "2026-05-21T00:14:53.882Z"
+  }
+},
+{
+  "model": "store.vacancy",
+  "pk": 3,
+  "fields": {
+    "title": "Работник склада",
+    "description": "Отвечает за учёт и пополнение запасов кроссовок на складе.",
+    "posted_at": "2026-05-21T00:50:37.345Z"
+  }
+},
+{
+  "model": "store.vacancy",
+  "pk": 4,
+  "fields": {
+    "title": "Работник сайта",
+    "description": "Работа с сайтом \r\nЗП - 20т/р",
+    "posted_at": "2026-05-21T01:22:14.824Z"
+  }
+},
+{
+  "model": "store.jobapplication",
+  "pk": 1,
+  "fields": {
+    "user": 2,
+    "vacancy": 1,
+    "status": "rejected",
+    "created_at": "2026-05-20T23:40:39.554Z",
+    "comment": ""
+  }
+},
+{
+  "model": "store.jobapplication",
+  "pk": 2,
+  "fields": {
+    "user": 4,
+    "vacancy": 1,
+    "status": "approved",
+    "created_at": "2026-05-21T00:09:24.538Z",
+    "comment": ""
+  }
+},
+{
+  "model": "store.jobapplication",
+  "pk": 3,
+  "fields": {
+    "user": 3,
+    "vacancy": 2,
+    "status": "approved",
+    "created_at": "2026-05-21T00:15:25.510Z",
+    "comment": ""
+  }
+},
+{
+  "model": "store.jobapplication",
+  "pk": 4,
+  "fields": {
+    "user": 5,
+    "vacancy": 2,
+    "status": "approved",
+    "created_at": "2026-05-21T00:21:16.342Z",
+    "comment": ""
+  }
+},
+{
+  "model": "store.jobapplication",
+  "pk": 7,
+  "fields": {
+    "user": 9,
+    "vacancy": 3,
+    "status": "approved",
+    "created_at": "2026-05-21T01:07:28.765Z",
+    "comment": ""
+  }
+},
+{
+  "model": "store.jobapplication",
+  "pk": 8,
+  "fields": {
+    "user": 10,
+    "vacancy": 1,
+    "status": "approved",
+    "created_at": "2026-05-21T01:09:13.764Z",
+    "comment": ""
+  }
+},
+{
+  "model": "store.jobapplication",
+  "pk": 9,
+  "fields": {
+    "user": 11,
+    "vacancy": 4,
+    "status": "approved",
+    "created_at": "2026-05-21T01:25:28.679Z",
+    "comment": ""
+  }
+},
+{
+  "model": "store.jobapplication",
+  "pk": 10,
+  "fields": {
+    "user": 4,
+    "vacancy": 4,
+    "status": "approved",
+    "created_at": "2026-05-21T10:13:45.138Z",
+    "comment": ""
+  }
+},
+{
+  "model": "store.review",
+  "pk": 1,
+  "fields": {
+    "user": 1,
+    "rating": 5,
+    "text": "крутой магазин",
+    "created_at": "2026-05-16T14:33:16.927Z"
+  }
+},
+{
+  "model": "store.review",
+  "pk": 2,
+  "fields": {
+    "user": 2,
+    "rating": 4,
+    "text": "Не хватает чего-то",
+    "created_at": "2026-05-18T16:31:39.308Z"
+  }
+},
+{
+  "model": "store.companyinfo",
+  "pk": 2,
+  "fields": {
+    "name": "О компании",
+    "history": "Мы занимаемся кроссовками",
+    "requisites": "",
+    "logo": "company/лого.jpg",
+    "video_url": null
+  }
+},
+{
+  "model": "store.privacypolicy",
+  "pk": 1,
+  "fields": {
+    "content": "Содержимое страницы политики конфиденциальности пока не придумал(",
+    "updated_at": "2026-05-21T02:09:21.173Z"
+  }
+}
+]
